@@ -6,3 +6,9 @@
 p{
     font-size: x-large;
 }
+.caixinhas{
+    background-position: center;
+    margin: auto;
+    text-align: center;
+    padding: 20px;
+}
