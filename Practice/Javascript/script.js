@@ -28,3 +28,25 @@ function calculate(numeros){
 }
 
 const soma = (n1 = 0,n2 = 0) => console.log(n1+n2);
+
+/* Destructuring something: The syntax is very simple, first you need to
+tell which attribute you want and then just say where it is.
+Ex: let {atributte} = object;*/
+
+let pessoa = {
+    name: 'Rita',
+    age: 10,
+    occupation: 'Lawyer',
+    status: 'Single',
+    children: 'No',
+    smoke: 'No',
+    drink: 'Yes'
+};
+
+//let {occupation: ocupacao} = pessoa; //Declaring with a variable name
+let {name: nome, occupation: ocupacao,age,status,...rest} = pessoa;
+console.log(`Her name is ${nome}, works as ${ocupacao}`);
+console.log(`She's ${age} y.o and is ${status}`);
+for(let model in rest){
+    console.log(`${model}? ${rest[model]}`); //Remember, you can also access an attribute with obj[atr]
+}
